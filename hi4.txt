@@ -1,0 +1,26 @@
+#include <iostream>
+#include <map>
+#include <string>
+using namespace std;
+
+void foo() {
+    cout << "Hello from foo!" << endl;
+}
+
+void bar() {
+    cout << "Hello from bar!" << endl;
+}
+
+int main() {
+    map<string, void(*)()> function_map = {{"foo", &foo}, {"bar", &bar}};
+    string function_name;
+    cout << "Enter a function name: ";
+    cin >> function_name;
+    auto it = function_map.find(function_name);
+    if (it != function_map.end()) {
+        it->second();
+    } else {
+        cout << "Function not found." << endl;
+    }
+    return 0;
+}

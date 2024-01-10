@@ -1,0 +1,50 @@
+#include <iostream>
+#include <map>
+#include <string>
+
+using namespace std;
+
+double add(double a, double b) {
+    return a + b;
+}
+
+double subtract(double a, double b) {
+    return a - b;
+}
+
+double multiply(double a, double b) {
+    return a * b;
+}
+
+double divide(double a, double b) {
+    return a / b;
+}
+
+int main() {
+    map<string, double (*)(double, double)> operations = {
+        {"add", add},
+        {"subtract", subtract},
+        {"multiply", multiply},
+        {"divide", divide}
+    };
+
+    string command;
+    double a, b;
+
+    cout << "Enter a command: ";
+    cin >> command;
+
+    double result = 0;
+
+    for (char c : command) {
+        string op(1, c);
+        if (operations.find(op) != operations.end()) {
+            cout << "Enter two numbers: ";
+            cin >> a >> b;
+            result = operationsop;
+            cout << "Result: " << result << endl;
+        }
+    }
+
+    return 0;
+}

@@ -1,0 +1,1 @@
+/usr/bin/g++ -g -rdynamic CMakeFiles/collector-1.dir/main.cpp.o -o collector-1 

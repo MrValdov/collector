@@ -1,0 +1,7 @@
+[
+{
+  "directory": "/home/lvinla/cppdev/collector-1/build",
+  "command": "/usr/bin/g++   -g -o CMakeFiles/collector-1.dir/main.cpp.o -c /home/lvinla/cppdev/collector-1/main.cpp",
+  "file": "/home/lvinla/cppdev/collector-1/main.cpp"
+}
+]
